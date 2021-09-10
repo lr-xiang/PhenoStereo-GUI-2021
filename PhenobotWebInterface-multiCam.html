@@ -567,9 +567,75 @@ function PhenoStereo4CheckFunction() {
 	<label for="PS4Check">PhenoStereo4:</label> 
 	<input type="checkbox" id="PS4Check" onclick="PhenoStereo4CheckFunction()">
 	
+	<p></p> 
+    ExposureAuto:     
+	<select id="ExposureAuto">
+    <option>Off</option>
+    <option>Continuous</option>
+    </select>
+	<p></p>
 
 	<p></p> 
     ExposureTime: <input type="number" id="ExposureTime" value="400">
+	<p></p>
+
+	<p></p> 
+    TriggerMode:     
+	<select id="TriggerMode">
+    <option>On</option>
+    <option>Off</option>
+    </select>
+	<p></p>
+
+	<p></p> 
+    TriggerSource:     
+	<select id="TriggerSource">
+    <option>Line0</option>
+    <option>Line1</option>
+    <option>Line2</option>
+    <option>Software</option>
+    </select>
+	<p></p>
+
+	<p></p> 
+    TriggerSource:     
+	<select id="TriggerSelector">
+    <option>FrameStart</option>
+    <option>AcquisitionStart</option>
+    </select>
+	<p></p>
+
+	<p></p> 
+    PixelFormat:     
+	<select id="PixelFormat">
+    <option>BayerRG8</option>
+    <option>Mono8</option>
+    </select>
+	<p></p>
+
+	<p></p> 
+    BalanceWhiteAuto:     
+	<select id="BalanceWhiteAuto">
+    <option>Off</option>
+    <option>Once</option>
+    <option>Continuous</option>
+    </select>
+	<p></p>
+
+	<p></p> 
+    GainAuto:     
+	<select id="GainAuto">
+    <option>Off</option>
+    <option>Continuous</option>
+    </select>
+	<p></p>
+
+	<p></p> 
+    Gain: <input type="number" id="Gain" value="6" >
+	<p></p>
+
+	<p></p> 
+    BalanceRatio: <input type="number" id="BalanceRatio" value="1.2" >
 	<p></p>
 
 	<p></p> 
@@ -622,14 +688,34 @@ function PhenoStereo4CheckFunction() {
 	<iframe src= '' id= 'target_frame1a' name='target_frame1a' width="512" Height="384"></iframe>
 
 	<iframe src= '' id= 'target_frame1b' name='target_frame1b' width="512" Height="384"></iframe>
+	<p>PhenoStereo3&4 preview</p>
+	<iframe src= '' id= 'target_frame2a' name='target_frame2a' width="512" Height="384"></iframe>
+		
+	<iframe src= '' id= 'target_frame2b' name='target_frame2b' width="512" Height="384"></iframe>
+    
+	<p>PhenoStereo3 preview</p>
+	<iframe src= '' id= 'target_frame3a' name='target_frame3a' width="512" Height="384"></iframe>
+		
+	<iframe src= '' id= 'target_frame3b' name='target_frame3b' width="512" Height="384"></iframe>
+    
+	<p>PhenoStereo4 preview</p>
+	<iframe src= '' id= 'target_frame4a' name='target_frame4a' width="512" Height="384"></iframe>
+		
+	<iframe src= '' id= 'target_frame4b' name='target_frame4b' width="512" Height="384"></iframe>
 	
 	<p></p>
 
     <script>
     	// put the video stream into the target frame
 		//need to run rosrun mjpeg_server mjpeg_server
-	document.getElementById('target_frame1a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo3/camera1/image";
-	document.getElementById('target_frame1b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo3/camera2/image";
+	document.getElementById('target_frame1a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera5/image";
+	document.getElementById('target_frame1b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera7/image";
+	document.getElementById('target_frame2a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo2/camera4/image";
+	document.getElementById('target_frame2b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo2/camera3/image";
+	document.getElementById('target_frame3a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo2/camera5/image";
+	document.getElementById('target_frame3b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo2/camera1/image";
+	document.getElementById('target_frame4a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo2/camera7/image";
+	document.getElementById('target_frame4b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo2/camera6/image";
 	
     </script>
 
