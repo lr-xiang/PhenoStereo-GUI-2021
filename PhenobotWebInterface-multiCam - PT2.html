@@ -38,7 +38,7 @@
 	  evt.currentTarget.className += " w3-red";
 	}
 
-  var ip = "192.214.0.100"; //location.host 192.214.0.108
+  var ip = "192.214.0.113"; //location.host 192.214.0.108
   var x = 0;
   var z = 0;
   var scale = 0;
@@ -708,14 +708,14 @@ function PhenoStereo4CheckFunction() {
     <script>
     	// put the video stream into the target frame
 		//need to run rosrun mjpeg_server mjpeg_server
-	document.getElementById('target_frame1a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera1/image";
-	document.getElementById('target_frame1b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera2/image";
-	document.getElementById('target_frame2a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera3/image";
-	document.getElementById('target_frame2b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera4/image";
-	document.getElementById('target_frame3a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera5/image";
-	document.getElementById('target_frame3b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera6/image";
-	document.getElementById('target_frame4a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera7/image";
-	document.getElementById('target_frame4b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera8/image";
+	document.getElementById('target_frame1a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo2/camera5/image";
+	document.getElementById('target_frame1b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo2/camera7/image";
+	document.getElementById('target_frame2a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo2/camera2/image";
+	document.getElementById('target_frame2b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo2/camera4/image";
+	//document.getElementById('target_frame3a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera5/image";
+	//document.getElementById('target_frame3b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo1/camera4/image";
+	//document.getElementById('target_frame4a').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo4/camera5/image";
+	//document.getElementById('target_frame4b').src = "http://" + ip + ":8080/stream?topic=/robot/PhenoStereo4/camera6/image";
 	
     </script>
 
@@ -724,7 +724,6 @@ function PhenoStereo4CheckFunction() {
   <div id="Navigation" class="w3-container window" style="display:none">
     <h2>Navigation Map</h2> 
 	<div id="nav"></div>
-
   </div>
 
   <div id="Sensor Msgs" class="w3-container window" style="display:none">
